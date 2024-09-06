@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees Information</title>
+    <script type="module" src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="form-section">
+    <h1>Employee Info</h1>
+    <form id="employee-form">
+      <input name="name" placeholder="Employee Name" />
+      <input name="job_title" placeholder="Job Title" />
+      <input name="salary" placeholder="Salary" />
+      <button type="submit">Submit</button>
+    </form>
+    <div id="employees"></div>
+</div>
+<div class="search-section">
+    <h2>Search For Employee By ID</h2>
+    <input id="employee-id" placeholder="Enter Employee ID"/>
+    <button id="search-button">Search</button>
+    <div id="search-result"></div>
+</div>
+</div>
+</body>
+</html>

@@ -4,7 +4,7 @@ const searchForInfo = document.getElementById("search-result");
 
 // Fetch and display all employees
 async function getEmployeesInfo() {
-  const response = await fetch("https://week4-project-buildfullstackguestbook-29zk.onrender.com/employees_info");
+  const response = await fetch("https://week4-project-buildfullstackguestbook.onrender.com/employees_info");
   if (response.ok) {
     const data = await response.json();
     employeesContainer.innerHTML = "";
@@ -25,7 +25,7 @@ form.addEventListener("submit", async event => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
 
-  const response = await fetch("https://week4-project-buildfullstackguestbook-29zk.onrender.com/employees_info", {
+  const response = await fetch("https://week4-project-buildfullstackguestbook.onrender.com/employees_info", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -45,7 +45,7 @@ form.addEventListener("submit", async event => {
 const searchById = document.getElementById("search-button");
 searchById.addEventListener("click", async () => {
   const employeeId = document.getElementById("employee-id").value;
-  const response = await fetch(`https://week4-project-buildfullstackguestbook-29zk.onrender.com/employees_info/${employeeId}`);
+  const response = await fetch(`https://week4-project-buildfullstackguestbook.onrender.com/employees_info/${employeeId}`);
   
   if (response.ok) {
     const data = await response.json();

@@ -8,23 +8,81 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <div class="form-section">
-    <h1>Employee Info</h1>
-    <form id="employee-form">
-      <input name="name" placeholder="Employee Name" />
-      <input name="job_title" placeholder="Job Title" />
-      <input name="salary" placeholder="Salary" />
-      <button type="submit">Submit</button>
-    </form>
-    <div id="employees"></div>
-</div>
-<div class="search-section">
-    <h2>Search For Employee By ID</h2>
-    <input id="employee-id" placeholder="Enter Employee ID"/>
-    <button id="search-button">Search</button>
-    <div id="search-result"></div>
-</div>
-</div>
+    <header>
+        <h1>Employees Registration Form</h1>
+    </header>
+    <div class="container">
+        <section class="section-one">
+            <form id="employee-form">
+                <div class="input-row">
+                    <div class="input-box">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="Enter First Name" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Enter Last Name" required>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-box">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter Your Email" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter Phone Number" required>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-box">
+                        <label for="job-title">Job Title</label>
+                        <input type="text" id="job-title" placeholder="Enter Job Title" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="salary">Salary</label>
+                        <input type="number" id="salary" placeholder="Enter Salary" required>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-box">
+                        <label for="dob">Date Of Birth</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="start-date">Start Date</label>
+                        <input type="date" id="start-date" required>
+                    </div>
+                </div>
+                <div class="gender-box">
+                    <h3>Gender</h3>
+                    <div class="gender-options">
+                        <div class="gender-option">
+                            <input type="radio" id="male" name="gender" value="Male" required>
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="gender-option">
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="gender-option">
+                            <input type="radio" id="prefer-not-to-say" name="gender" value="Other" required>
+                            <label for="prefer-not-to-say">Other</label>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </section>
+        <div class="search-box">
+            <label for="search">Search by Last Name:</label>
+            <input type="text" id="search" placeholder="Enter Last Name">
+            <button id="search-button" type="button">Search</button>
+            <div id="search-result"></div>
+        </div>
+    </div>
 </body>
 </html>

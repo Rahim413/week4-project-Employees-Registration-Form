@@ -1,91 +1,239 @@
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #785d5d;
-  }
-  h1, h2 {
-    color: #000000;
-  }
+  font-family: Arial, sans-serif;
+  background: url("background_Image.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+header h1 {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  width: 100%;
+  gap: 20px;
+}
+
+.search-box {
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(228, 3, 3, 0.1);
+  position: relative;
+}
+
+.search-box label {
+  font-size: 14px;
+  color: #8a0000dc;
+}
+
+.search-box input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width:150px;
+  margin-right: 10px;
+}
+
+.search-box button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.search-box button:hover {
+  background-color: #17569e;
+}
+
+#search-result {
+  margin-top: 30px;
+}
+
+#search-result p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #2c2427;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#search-result h3 {
+  margin-top: 10px;
+  color: #119644;
+}
+
+.section-one {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.input-box {
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 5px;
+  color: #e20c0ca2;
+  font-size: 14px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.input-box input:focus {
+  border-color: #724343;
+  outline: none;
+}
+
+.gender-box {
+  margin-bottom: 15px;
+}
+
+.gender-box h3 {
+  margin-bottom: 10px;
+  color: #e20c0ca2;
+  font-size: 14px;
+}
+
+.gender-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.gender-option {
+  display: flex;
+  align-items: center;
+}
+
+.gender-option input {
+  margin-right: 5px;
+}
+
+.button {
+  text-align: center;
+}
+
+.button input[type="submit"] {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+}
+
+.button input[type="submit"]:hover {
+  background-color: #17569e;
+}
+
+@media (max-width: 480px) {
   .container {
-    display: flex;
-    gap: 400px;
-  }
-  .form-section {
-    margin-top: 60px;
-    width: 40%;
-    background-color: rgb(166, 164, 164);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  .search-section {
-    margin-top: 60px;
-    width: 30%;
-    background-color: rgb(248, 248, 248);
-    padding: 5px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  form input {
-    padding: 12px;
-    border: 2px solid #484242;
-    margin-bottom: 10px;
-  }
-  button {
-    padding: 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #07250e;
-  }
-  #employee-id { 
-    height: 45px; 
-    font-size: 16px; 
-    border: 1px solid #4f4b4b;
-    border-radius: 4px;
-    box-sizing: border-box; 
-  }
-  #search-result {
-    margin-top: 20px;
-  }
-  #employees p, #search-result p {
-    padding: 10px;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-    margin: 5px 0;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 1200px) {
-    .container {
       flex-direction: column;
-      gap: 20px;
-    }
-    .form-section, .search-section {
+      align-items: center;
+  }
+
+  .search-box {
+      max-width: 100%;
+  }
+
+  .section-one {
+      max-width: 100%;
+  }
+
+  .input-row {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .gender-options {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+@media (max-width: 370px) {
+  header {
+      padding: 0 10px;
+  }
+
+  .search-box {
       width: 100%;
-    }
   }
-  
-  @media (max-width: 768px) {
-    body {
-      padding: 10px;
-    }
-    .form-section, .search-section {
-      padding: 5px;
-      margin-top: 30px;
-    }
-    form input {
-      padding: 10px;
-      font-size: 14px;
-    }
-    button {
-      padding: 10px;
-    }
+
+  .section-one {
+      padding: 15px;
   }
-  
+
+  .section-one h1 {
+      font-size: 20px;
+  }
+
+  .input-box label, 
+  .gender-box h3 {
+      font-size: 13px;
+  }
+
+  .input-box input {
+      padding: 8px;
+      font-size: 12px;
+  }
+
+  .button input[type="submit"] {
+      padding: 8px;
+      font-size: 13px;
+  }
+
+  .search-box input {
+      padding: 8px;
+      font-size: 13px;
+  }
+
+  .search-box button {
+      padding: 8px;
+      font-size: 13px;
+  }
+}
